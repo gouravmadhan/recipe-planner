@@ -1,17 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-   import '../app.css';
+	import '../app.css';
 
 	let { children } = $props();
 
-	onMount(async () => {
-		const { defineCustomElements } = await import('recipe-ui-kit/loader');
-		defineCustomElements();
-	});
-
 	const links = [
-		{ href: '/', label: 'Discovery' },
+		{ href: '/', label: 'Discover' },
 		{ href: '/favorites', label: 'Favorites' },
 		{ href: '/planner', label: 'Meal Planner' },
 		{ href: '/my-recipes', label: 'My Recipes' }
